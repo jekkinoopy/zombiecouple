@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+    --bg-light: #9bd3c2;
+    /* 圖片上半部藍色 */
+    --bg-dark: #5c8c7c;
+    /* 圖片下半部灰藍色 */
+    --text-white: #ffffff;
+    --text-dark: #1a1a1a;
+    --accent-orange: #FF9478;
+    /* 萬聖節南瓜橘 */
+    --border-width: 3px;
+    font-size: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Noto Serif TC', serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* 標頭：改為像素遊戲風格 */
+.shop-header {
+    /* background-color: var(--bg-light); */
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--accent-orange);
+}
+
+.banner-area {
+
+    position: relative;
+}
+
+.shop-header h1 {
+    font-family: 'VT323', monospace;
+    font-size: 4rem;
+    letter-spacing: 4px;
+    text-shadow: 4px 4px 0px var(--text-dark);
+    text-transform: uppercase;
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    /* 1. 先讓左邊界對齊中線 */
+    transform: translateX(-50%);
+    /* 2. 再把自己往左推回自身寬度的一半 */
+    top: 60%;
+
+}
+
+.subtitle {
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+}
+
+.main-section {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    background-color: var(--text-white);
+    /* border: var(--border-width) solid var(--text-dark); */
+    box-shadow: 10px 10px 0px var(--bg-dark);
+    /* 增加硬陰影感 */
+    padding: 40px;
+}
+
+/* 表格結構調整 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* TH 寬度與防止換行處理 */
+th {
+    background-color: var(--text-dark);
+    color: var(--text-white);
+    padding: 15px;
+    text-align: left;
+    font-weight: normal;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    /* 防止換行最合適的方式 */
+    white-space: nowrap;
+}
+
+/* 在 CSS 寫死 TH 寬度 */
+th:nth-child(1) {
+    width: 320px;
+}
+
+/* 圖片 */
+th:nth-child(2) {
+    width: 250px;
+}
+
+/* 品名 */
+th:nth-child(3) {
+    width: 100px;
+}
+
+/* 售價 */
+th:nth-child(4) {
+    width: auto;
+}
+
+/* 規格 */
+th:nth-child(5) {
+    width: 120px;
+}
+
+/* 數量 */
+th:nth-child(6) {
+    width: 120px;
+}
+
+/* 小計 */
+
+td {
+    padding: 15px;
+    border-bottom: 2px solid var(--bg-light);
+    vertical-align: middle;
+}
+
+/* 圖片容器：模擬 Sprite 感 */
+.img {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    /* border: var(--border-width) solid var(--text-dark); */
+    background-color: #f0f0f0;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Input 樣式：像遊戲選單 */
+input[type="number"] {
+    width: 80px;
+    padding: 8px;
+    border: 2px solid var(--text-dark);
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* 購買須知區塊 */
+.notice-section {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    border: var(--border-width) solid var(--text-dark);
+}
+
+.notice-title {
+    font-family: 'VT323', monospace;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--text-white);
+    display: inline-block;
+}
+
+.notice-list {
+    list-style: square;
+    padding-left: 20px;
+}
+
+.notice-list li {
+    margin-bottom: 10px;
+}
+
+.highlight-text {
+    color: var(--accent-orange);
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    font-family: 'VT323', monospace;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+}

@@ -1,0 +1,223 @@
+:root {
+    --text: #864f10;
+    /* 深灰色文字，比純黑更有質感 */
+    --text-light: #fc9928;
+    /* 淺灰色輔助字 */
+    --accent: #E0E0E0;
+    /* 極淡灰線條 */
+    --bg: #ffffff;
+    /* 純白背景 */
+    --zombie: #F2C94C;
+    /* 沿用黃色變數 */
+    font-size: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "Helvetica Neue", "Helvetica", "Arial", "PingFang TC", sans-serif;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    /* 增加字距營造高級感 */
+}
+
+/* 標頭：像藝術展覽標題 */
+.shop-header {
+    width: 100%;
+    text-align: center;
+    padding: 80px 20px 40px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-top: 1px solid var(--accent);
+}
+
+.shop-header img {
+    max-width: 600px;
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+    filter: grayscale(100%);
+    transition: filter 0.5s;
+}
+
+.shop-header img:hover {
+    filter: grayscale(0%);
+}
+
+.main-section {
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto 100px;
+}
+
+/* 表格基礎結構 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+}
+
+th {
+    border-bottom: 1px solid var(--text);
+    color: var(--text);
+    font-size: 0.9rem;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+tr:hover td {
+    background-color: #fafafa;
+}
+
+/* 圖片容器 */
+.img {
+    width: 320px;
+    height: 320px;
+    padding: 0 !important;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--accent);
+}
+
+.img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.95);
+    transition: transform 0.6s ease;
+}
+
+.img.sc img {
+    transform: scale(1.1);
+}
+
+/* 表格內容文字 (優先保留後半段優化版本) */
+td:not(.img) {
+    font-size: 0.9rem;
+    color: var(--text);
+    padding: 20px 30px;
+    letter-spacing: 0.1em;
+    vertical-align: top;
+    text-align: left;
+    border-bottom: 1px solid var(--accent);
+}
+
+/* Input 與表單元件 (極簡畫廊風) */
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 12px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--accent);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-bottom 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-bottom: 1px solid var(--text);
+}
+
+input::placeholder {
+    color: var(--text-light);
+    font-size: 0.8rem;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+/* 標籤與提示樣式 */
+.label-text {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.info-icon {
+    color: var(--zombie);
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.info-point {
+    border-left: 2px solid #E5C669;
+    padding-left: 15px;
+    margin: 10px 0;
+}
+
+/* 購買須知區塊 */
+.notice-section {
+    border-top: 1px solid var(--accent);
+    padding-top: 60px;
+    margin-top: 80px;
+}
+
+.notice-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: var(--text);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.notice-title::before {
+    content: "";
+    width: 20px;
+    height: 1px;
+    background: var(--text);
+    margin-right: 15px;
+}
+
+ul.notice-list {
+    list-style: none;
+    padding: 0;
+}
+
+ul.notice-list li {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 25px;
+    line-height: 1.8;
+    display: flex;
+    align-items: flex-start;
+    transition: color 0.3s;
+}
+
+ul.notice-list li:hover {
+    color: var(--text);
+}
+
+ul.notice-list li::before {
+    content: "●";
+    color: var(--zombie);
+    font-size: 8px;
+    margin-right: 20px;
+    margin-top: 6px;
+}
+
+.highlight-text {
+    color: var(--text);
+    font-weight: 500;
+    border-bottom: 1px solid var(--zombie);
+    /* 統一代稱為變數 */
+}
