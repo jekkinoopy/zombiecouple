@@ -2,15 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 :root {
-    --bg-light: #9bd3c2;
-    /* 圖片上半部藍色 */
-    --bg-dark: #5c8c7c;
-    /* 圖片下半部灰藍色 */
+    --bg-light: #a7dccd;
+    --bg-dark: #5f8f81;
+    --mint-soft: #dff6ee;
     --text-white: #ffffff;
-    --text-dark: #1a1a1a;
-    --accent-orange: #FF9478;
-    /* 萬聖節南瓜橘 */
-    --border-width: 3px;
+    --text-dark: #2a2a2a;
+    --accent-orange: #ff9478;
+    --accent-pink: #ffbfd2;
+    --card-shadow: 0 12px 0 rgba(70, 109, 98, 0.45);
+    --line-soft: rgba(95, 143, 129, 0.3);
     font-size: 18px;
 }
 
@@ -23,165 +23,242 @@
 
 body {
     font-family: 'Noto Serif TC', serif;
-    background-color: var(--bg-light);
+    background: linear-gradient(180deg, #bdebe0 0%, #a6d9c9 45%, #92c7b7 100%);
     color: var(--text-dark);
     line-height: 1.6;
+    min-height: 100vh;
 }
 
-/* 標頭：改為像素遊戲風格 */
 .shop-header {
-    /* background-color: var(--bg-light); */
     text-align: center;
-    padding: 60px 20px;
+    padding: 56px 20px 28px;
     color: var(--accent-orange);
 }
 
 .banner-area {
-
     position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 28px;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    box-shadow: var(--card-shadow);
+}
+
+.banner {
+    width: 100%;
+    max-height: 430px;
+    object-fit: cover;
+    display: block;
+    filter: saturate(1.05) contrast(1.03);
+}
+
+.banner-area::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(22, 32, 28, 0.18) 15%, rgba(27, 39, 33, 0.38) 78%);
 }
 
 .shop-header h1 {
     font-family: 'VT323', monospace;
-    font-size: 4rem;
-    letter-spacing: 4px;
-    text-shadow: 4px 4px 0px var(--text-dark);
+    font-size: clamp(2.3rem, 5.2vw, 4.3rem);
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     left: 50%;
-    /* 1. 先讓左邊界對齊中線 */
     transform: translateX(-50%);
-    /* 2. 再把自己往左推回自身寬度的一半 */
-    top: 60%;
-
+    top: 56%;
+    width: 88%;
+    color: #ffd3bf;
 }
 
 .subtitle {
     font-family: 'VT323', monospace;
-    font-size: 1.5rem;
-    color: var(--text-dark);
+    font-size: clamp(1.2rem, 2.3vw, 2rem);
+    color: #fff8f4;
+    letter-spacing: 3px;
+    position: absolute;
+    left: 50%;
+    top: 72%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.35);
 }
 
 .main-section {
     width: 95%;
     max-width: 1200px;
-    margin: 0 auto 100px;
-    background-color: var(--text-white);
-    /* border: var(--border-width) solid var(--text-dark); */
-    box-shadow: 10px 10px 0px var(--bg-dark);
-    /* 增加硬陰影感 */
-    padding: 40px;
+    margin: 24px auto 90px;
+    background: linear-gradient(180deg, #ffffff 0%, #f5fffb 100%);
+    border-radius: 26px;
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    box-shadow: var(--card-shadow);
+    padding: clamp(18px, 2.7vw, 38px);
 }
 
-/* 表格結構調整 */
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
 }
 
-/* TH 寬度與防止換行處理 */
 th {
-    background-color: var(--text-dark);
-    color: var(--text-white);
+    background: linear-gradient(180deg, #6ea495 0%, #5f8f81 100%);
+    color: #fff4eb;
     padding: 15px;
     text-align: left;
     font-weight: normal;
     font-family: 'VT323', monospace;
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     letter-spacing: 2px;
-    /* 防止換行最合適的方式 */
     white-space: nowrap;
+    border-bottom: 3px solid rgba(43, 62, 55, 0.25);
 }
 
-/* 在 CSS 寫死 TH 寬度 */
+thead th:first-child {
+    border-top-left-radius: 16px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 16px;
+}
+
 th:nth-child(1) {
-    width: 320px;
+    width: 300px;
 }
 
-/* 圖片 */
 th:nth-child(2) {
-    width: 250px;
+    width: 220px;
 }
 
-/* 品名 */
 th:nth-child(3) {
-    width: 100px;
+    width: 110px;
 }
 
-/* 售價 */
 th:nth-child(4) {
     width: auto;
 }
 
-/* 規格 */
 th:nth-child(5) {
-    width: 120px;
+    width: 130px;
 }
 
-/* 數量 */
 th:nth-child(6) {
-    width: 120px;
+    width: 130px;
 }
-
-/* 小計 */
 
 td {
     padding: 15px;
-    border-bottom: 2px solid var(--bg-light);
+    border-bottom: 1px solid var(--line-soft);
     vertical-align: middle;
+    background-color: rgba(255, 255, 255, 0.78);
 }
 
-/* 圖片容器：模擬 Sprite 感 */
-.img {
-    width: 300px;
-    height: 200px;
-    overflow: hidden;
-    /* border: var(--border-width) solid var(--text-dark); */
-    background-color: #f0f0f0;
+tbody tr:nth-child(even) td {
+    background-color: rgba(223, 246, 238, 0.62);
 }
 
-.img img {
+tbody tr:hover td {
+    background-color: rgba(255, 191, 210, 0.18);
+}
+
+td.img {
+    padding: 10px;
+}
+
+td.img img {
     width: 100%;
-    height: 100%;
+    max-width: 220px;
+    height: 150px;
     object-fit: cover;
+    object-position: center;
     display: block;
+    margin: 0 auto;
+    border-radius: 14px;
+    border: 2px solid rgba(95, 143, 129, 0.35);
+    background-color: #f8fcfb;
 }
 
-/* Input 樣式：像遊戲選單 */
+/* 圖片位移規則：
+   1) class 名稱就是「你想讓圖片移動的方向」。
+   2) object-position 是取景點，所以數值要和移動方向反著設。
+      例：想讓圖片往下，就把取景點往上（y 變小）。
+   3) 微調技巧：
+      - x：往左移圖片 => 數值加大；往右移圖片 => 數值減小
+      - y：往上移圖片 => 數值加大；往下移圖片 => 數值減小 */
+td.img.shift-down img {
+    object-position: center 30%;
+}
+
+td.img.shift-up img {
+    object-position: center 70%;
+}
+
+td.img.shift-up-left img {
+    object-position: 68% 70%;
+}
+
+td.img.shift-up-right img {
+    object-position: 32% 70%;
+}
+
 input[type="number"] {
-    width: 80px;
-    padding: 8px;
-    border: 2px solid var(--text-dark);
+    width: 88px;
+    padding: 8px 10px;
+    border: 2px solid rgba(95, 143, 129, 0.55);
+    border-radius: 12px;
     font-family: 'VT323', monospace;
     font-size: 1.2rem;
     text-align: center;
+    background-color: #ffffff;
+    color: #355247;
+    transition: all 0.2s ease;
 }
 
-/* 購買須知區塊 */
+input[type="number"]:focus {
+    outline: none;
+    border-color: var(--accent-orange);
+    box-shadow: 0 0 0 3px rgba(255, 148, 120, 0.25);
+}
+
 .notice-section {
     margin-top: 50px;
     padding: 30px;
-    background-color: var(--bg-dark);
+    background: linear-gradient(145deg, #6da091 0%, #5a887a 100%);
     color: var(--text-white);
-    border: var(--border-width) solid var(--text-dark);
+    border-radius: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 8px 0 rgba(44, 73, 64, 0.35);
 }
 
 .notice-title {
     font-family: 'VT323', monospace;
-    font-size: 2rem;
+    font-size: 2.1rem;
     margin-bottom: 20px;
-    border-bottom: 2px solid var(--text-white);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.7);
     display: inline-block;
+    letter-spacing: 1px;
 }
 
 .notice-list {
-    list-style: square;
+    list-style: none;
     padding-left: 20px;
 }
 
 .notice-list li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.notice-list li::before {
+    content: "★";
+    position: absolute;
+    left: 0;
+    color: #ffd8ca;
 }
 
 .highlight-text {
@@ -191,8 +268,44 @@ input[type="number"] {
 
 footer {
     text-align: center;
-    padding: 40px;
+    padding: 34px 20px;
     font-family: 'VT323', monospace;
-    background-color: var(--bg-dark);
-    color: var(--text-white);
+    background: linear-gradient(180deg, #638f80 0%, #4f786b 100%);
+    color: #fff0e6;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+    .main-section {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 920px;
+    }
+
+    .shop-header {
+        padding-top: 38px;
+    }
+}
+
+@media (max-width: 640px) {
+    .banner-area {
+        border-radius: 20px;
+    }
+
+    .shop-header h1 {
+        top: 53%;
+        letter-spacing: 2px;
+    }
+
+    .subtitle {
+        top: 70%;
+        letter-spacing: 2px;
+    }
+
+    .notice-section {
+        padding: 22px;
+        margin-top: 36px;
+    }
 }
