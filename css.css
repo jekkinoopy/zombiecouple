@@ -1,0 +1,352 @@
+/* 對齊 ZombieCoupleShop main.css 版型（非作業淺綠配色） */
+
+:root {
+    --shop-bg: #ebe6dc;
+    --shop-paper: #faf8f4;
+    --shop-ink: #2b2b2b;
+    --shop-muted: #5c5c5c;
+    --shop-line: rgba(43, 43, 43, 0.14);
+    --shop-accent: #7a3030;
+    --shop-highlight: #c45c4a;
+    --shop-radius: 10px;
+    --font-body: "Noto Sans TC", system-ui, sans-serif;
+    --font-serif: "Crimson Pro", "Noto Serif TC", Georgia, serif;
+    --font-display: "Creepster", cursive;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--shop-ink);
+    background: var(--shop-bg);
+}
+
+.shop-header {
+    padding: 1.25rem 1rem 0;
+}
+
+.hero-card {
+    max-width: 52rem;
+    margin: 0 auto;
+    background: var(--shop-paper);
+    border-radius: var(--shop-radius);
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(43, 43, 43, 0.08);
+    border: 1px solid var(--shop-line);
+}
+
+.hero-art {
+    background: #e8e2d8;
+    line-height: 0;
+}
+
+.hero-art__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 14rem;
+    object-fit: cover;
+}
+
+.hero-art__fallback {
+    margin: 0;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: var(--shop-accent);
+    letter-spacing: 0.06em;
+}
+
+.hero-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-top: 1px solid var(--shop-line);
+}
+
+.hero-bar__logo {
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--shop-line);
+    flex-shrink: 0;
+}
+
+.hero-bar__mark {
+    flex-shrink: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: 2px solid var(--shop-line);
+    background: #e8e2d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    color: var(--shop-accent);
+}
+
+.hero-bar__brand {
+    margin: 0;
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--shop-muted);
+}
+
+.hero-bar__copy h1 {
+    margin: 0.2rem 0 0;
+    font-family: var(--font-serif);
+    font-size: clamp(1.35rem, 3.2vw, 1.85rem);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--shop-ink);
+}
+
+.hero-bar__tag {
+    margin: 0.25rem 0 0;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    color: var(--shop-highlight);
+    letter-spacing: 0.04em;
+}
+
+.main-section {
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 1.25rem 1rem 0;
+}
+
+.product-list {
+    margin: 0;
+}
+
+.table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    background: var(--shop-paper);
+    border: 1px solid var(--shop-line);
+    border-radius: var(--shop-radius);
+    box-shadow: 0 8px 24px rgba(43, 43, 43, 0.06);
+}
+
+.register-form {
+    padding: 1.35rem 1.25rem 1.5rem;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 1.15rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--shop-line);
+}
+
+.form-header h2 {
+    margin: 0 0 0.3rem;
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--shop-ink);
+}
+
+.form-header p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--shop-muted);
+}
+
+.success-message {
+    display: none;
+    margin-bottom: 1rem;
+    padding: 0.6rem 0.85rem;
+    border-radius: 6px;
+    background: #f3ebe8;
+    border: 1px solid var(--shop-line);
+    color: var(--shop-ink);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.success-message.is-visible {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 0.9rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: "Courier New", Consolas, monospace;
+    letter-spacing: 0.02em;
+    color: var(--shop-muted);
+    text-transform: uppercase;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--shop-ink);
+    background: #fff;
+    border: 1px solid var(--shop-line);
+    border-radius: 4px;
+}
+
+.form-group input:focus {
+    outline: 2px solid var(--shop-highlight);
+    outline-offset: 1px;
+    border-color: var(--shop-highlight);
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.1rem;
+}
+
+.btn-submit,
+.btn-reset {
+    flex: 1 1 7.5rem;
+    padding: 0.6rem 1rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 4px;
+    border: 1px solid var(--shop-line);
+    cursor: pointer;
+}
+
+.btn-submit {
+    background: var(--shop-ink);
+    color: var(--shop-paper);
+    border-color: var(--shop-ink);
+}
+
+.btn-submit:hover {
+    background: var(--shop-accent);
+    border-color: var(--shop-accent);
+}
+
+.btn-reset {
+    background: var(--shop-paper);
+    color: var(--shop-ink);
+}
+
+.info-text {
+    margin: 0.85rem 0 0;
+    font-size: 0.78rem;
+    color: var(--shop-muted);
+    text-align: center;
+}
+
+.notice-section {
+    margin-top: 1.25rem;
+    padding: 1.15rem 1.1rem 1.25rem;
+    background: var(--shop-paper);
+    border: 1px solid var(--shop-line);
+    border-radius: var(--shop-radius);
+}
+
+.notice-title {
+    margin: 0 0 0.75rem;
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--shop-ink);
+}
+
+.notice-title__en {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.notice-title__sep {
+    opacity: 0.4;
+}
+
+.notice-list {
+    margin: 0;
+    padding-left: 1.15rem;
+}
+
+.notice-list li {
+    margin-bottom: 0.4rem;
+}
+
+.notice-list li:last-child {
+    margin-bottom: 0;
+}
+
+.highlight-text {
+    color: var(--shop-highlight);
+    font-weight: 600;
+}
+
+.spec-block {
+    margin-top: 0.9rem;
+}
+
+.spec-block h3 {
+    margin: 0 0 0.35rem;
+    font-family: "Courier New", Consolas, monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--shop-muted);
+}
+
+.spec-block ul {
+    margin: 0;
+    padding-left: 1.15rem;
+}
+
+.site-footer {
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2rem;
+    text-align: center;
+    font-family: var(--font-serif);
+    font-size: 0.9rem;
+    color: var(--shop-muted);
+}
+
+.site-footer__rights {
+    margin: 0.2rem 0 0;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+}
+
+@media (min-width: 40rem) {
+
+    .shop-header,
+    .main-section {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .register-form {
+        padding: 1.5rem 1.75rem 1.75rem;
+    }
+}
