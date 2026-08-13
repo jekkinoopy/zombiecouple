@@ -4,146 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ZombieCoupleShop 手作鉤織玩偶與鑰匙圈，溫暖毛線小物與客製服務。">
     <title>手作毛線系列 | ZombieCoupleShop</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./css/css.css">
+    <link rel="stylesheet" href="./css/main.css">
+
 </head>
 
 <body>
-    <header class="shop-header">
-        <div class="hero-card">
-            <div class="hero-art">
-                <img src="./banner.jpg" alt="Zombie Couple Shop 主視覺：手作鉤織殭屍玩偶" class="hero-art__img" fetchpriority="high">
+
+
+    <iframe name="back" style="display:none;"></iframe>
+    <div id="main">
+        <div id="top">
+            <a href="?">
+                <header class="shop-header">
+                    <div class="banner-area">
+                        <img src="./banner.png" alt="ZombieCouple橫幅" class="banner">
+                        <h1>手作毛線系列</h1>
+                        <p class="subtitle">CROCHET DOLLS</p>
+                    </div>
+                </header>
+            </a>
+            <div style="margin: auto;text-align: center;margin-bottom: 50px;">
+                <a href="?do=index">回首頁</a> |
+                <a href="?do=news">最新消息</a> |
+                <a href="?do=look">購物流程</a> |
+                <a href="?do=buycart">購物車</a> |
+                <a href="?do=login">會員登入</a> |
+                <a href="?do=admin">管理登入</a>
             </div>
-            <div class="hero-bar">
-                <div class="hero-bar__mark">
-                    <img src="./logo.jpg" alt="Zombie Couple Shop 標誌" class="hero-bar__logo">
-                </div>
-                <div class="hero-bar__copy">
-                    <p class="hero-bar__brand">Zombie Couple Shop</p>
-                    <h1>手作毛線系列</h1>
-                    <p class="hero-bar__tag">Crochet Dolls</p>
-                </div>
-            </div>
+            情人節特惠活動 &nbsp; 為了慶祝七夕情人節，將舉辦情人兩人到現場有七七折之特惠活動~
         </div>
-    </header>
-    <main class="main-section">
-        <section class="product-list">
-            <div class="table-scroll" role="region" aria-label="商品清單">
-            <table class="product-table">
-                <!-- <caption>商品清單與售價</caption> -->
-                <thead>
-                    <tr>
-                        <th class="title">圖片</th>
-                        <th class="title">品名</th>
-                        <th class="title">售價</th>
-                        <th class="title">規格</th>
-                        <th class="title">數量</th>
-                        <th class="title">小計</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="img"><img src="yarn/yarn001.jpg" alt="貓頭鷹 鉤織玩偶"></td>
-                        <td class="product-info">貓頭鷹</td>
-                        <td class="product-price">390</td>
-                        <td class="spec">尺寸約 8cm，含金屬扣環</td>
-                        <td class="qty"><input type="number" min="0" value="0" aria-label="貓頭鷹 數量"></td>
-                        <td class="line-total"><input type="number" aria-label="貓頭鷹 小計"></td>
-                    </tr>
-                    <tr>
-                        <td class="img sc"><img src="yarn/yarn002.jpg" alt="寶可夢球 鉤織玩偶"></td>
-                        <td class="product-info">寶可夢球</td>
-                        <td class="product-price">390</td>
-                        <td class="spec">尺寸約 8cm，含金屬扣環</td>
-                        <td class="qty"><input type="number" min="0" value="0" aria-label="寶可夢球 數量"></td>
-                        <td class="line-total"><input type="number" aria-label="寶可夢球 小計"></td>
-                    </tr>
-                    <tr>
-                        <td class="img"><img src="yarn/yarn003.jpg" alt="小鈴鐺項圈 鉤織"></td>
-                        <td class="product-info">小鈴鐺項圈</td>
-                        <td class="product-price">390</td>
-                        <td class="spec">尺寸約 8cm，含金屬扣環</td>
-                        <td class="qty"><input type="number" min="0" value="0" aria-label="小鈴鐺項圈 數量"></td>
-                        <td class="line-total"><input type="number" aria-label="小鈴鐺項圈 小計"></td>
-                    </tr>
-                    <tr>
-                        <td class="img sc"><img src="yarn/yarn004.jpg" alt="嘟嘴小鴨 鉤織玩偶"></td>
-                        <td class="product-info">嘟嘴小鴨</td>
-                        <td class="product-price">390</td>
-                        <td class="spec">尺寸約 8cm，含金屬扣環</td>
-                        <td class="qty"><input type="number" min="0" value="0" aria-label="嘟嘴小鴨 數量"></td>
-                        <td class="line-total"><input type="number" aria-label="嘟嘴小鴨 小計"></td>
-                    </tr>
-                    <tr>
-                        <td class="img sc"><img src="yarn/yarn005.jpg" alt="小鴨置物籃 鉤織"></td>
-                        <td class="product-info">小鴨置物籃</td>
-                        <td class="product-price">390</td>
-                        <td class="spec">尺寸約 8cm，含金屬扣環</td>
-                        <td class="qty"><input type="number" min="0" value="0" aria-label="小鴨置物籃 數量"></td>
-                        <td class="line-total"><input type="number" aria-label="小鴨置物籃 小計"></td>
-                    </tr>
-                    <tr>
-                        <td class="img"><img src="yarn/yarn006.jpg" alt="小小兵鑰匙圈"></td>
-                        <td class="product-info">小小兵鑰匙圈</td>
-                        <td class="product-price">390</td>
-                        <td class="spec">尺寸約 8cm，含金屬扣環</td>
-                        <td class="qty"><input type="number" min="0" value="0" aria-label="小小兵鑰匙圈 數量"></td>
-                        <td class="line-total"><input type="number" aria-label="小小兵鑰匙圈 小計"></td>
-                    </tr>
-                    <tr>
-                        <td class="img"><img src="yarn/yarn007.jpg" alt="毛怪與大眼怪 鉤織玩偶"></td>
-                        <td class="product-info">毛怪大眼怪</td>
-                        <td class="product-price">390</td>
-                        <td class="spec">尺寸約 8cm，含金屬扣環</td>
-                        <td class="qty"><input type="number" min="0" value="0" aria-label="毛怪大眼怪 數量"></td>
-                        <td class="line-total"><input type="number" aria-label="毛怪大眼怪 小計"></td>
-                    </tr>
-                    <tr>
-                        <td class="img"><img src="yarn/yarn008.jpg" alt="皮卡丘 鉤織玩偶"></td>
-                        <td class="product-info">皮卡丘</td>
-                        <td class="product-price">390</td>
-                        <td class="spec">尺寸約 8cm，含金屬扣環</td>
-                        <td class="qty"><input type="number" min="0" value="0" aria-label="皮卡丘 數量"></td>
-                        <td class="line-total"><input type="number" aria-label="皮卡丘 小計"></td>
-                    </tr>
-                    <tr>
-                        <td class="img"><img src="yarn/yarn009.jpg" alt="無臉男鑰匙圈"></td>
-                        <td class="product-info">無臉男鑰匙圈</td>
-                        <td class="product-price">390</td>
-                        <td class="spec">尺寸約 8cm，含金屬扣環</td>
-                        <td class="qty"><input type="number" min="0" value="0" aria-label="無臉男鑰匙圈 數量"></td>
-                        <td class="line-total"><input type="number" aria-label="無臉男鑰匙圈 小計"></td>
-                    </tr>
-                    <tr>
-                        <td class="img"><img src="yarn/yarn010.jpg" alt="龍貓鑰匙圈"></td>
-                        <td class="product-info">龍貓鑰匙圈</td>
-                        <td class="product-price">880</td>
-                        <td class="spec">尺寸約 8cm，含金屬扣環</td>
-                        <td class="qty"><input type="number" min="0" value="0" aria-label="龍貓鑰匙圈 數量"></td>
-                        <td class="line-total"><input type="number" aria-label="龍貓鑰匙圈 小計"></td>
-                    </tr>
-                </tbody>
-            </table>
+        <div id="left" class="ct">
+
+            <div style="min-height:400px;">
+                <div class="b">全部商品</div>
+                <!-- 大分類:流行皮件、流行鞋區、流行飾品、背包 -->
+
+                <div class="b">流行皮件
+                    <div class="m">男用皮件、女用皮件</div>
+                </div>
+
+                <div class="b">流行鞋區
+                    <div class="m">女鞋區、紳士流行鞋區</div>
+                </div>
+
+                <div class="b">流行飾品
+                    <div class="m">時尚手錶、時尚珠寶</div>
+                </div>
+
+                <div class="b">背包
+                    <div class="m">背包</div>
+                </div>
             </div>
-            <!-- 修正：將購買須知移出表格，使用語意化標籤 -->
-            <div class="notice-section">
-                <h2 class="notice-title"><span class="notice-title__en" lang="en">Purchase Notice</span><span class="notice-title__sep" aria-hidden="true"> / </span><span class="notice-title__zh" lang="zh-Hant">購買須知</span></h2>
-                <ul class="notice-list">
-                    <li>所有商品均為手工編織，工作天約 <span class="highlight-text">7-14 天</span>，不收急單。</li>
-                    <li>手工製品難免有微小線頭或尺寸誤差，這正是手作的溫度。</li>
-                    <li>螢幕色彩與實品可能有些許色差，請以實物為準。</li>
-                    <li>提供客製化服務，歡迎私訊討論細節。</li>
-                </ul>
-            </div>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <p>Zombie Couple Shop</p>
-        <p class="site-footer__rights">All rights reserved.</p>
+            <span>
+                <div>進站總人數</div>
+                <div style="color:#f00; font-size:28px;">
+                    00005 </div>
+            </span>
+        </div>
+
+
+        <!-- 大分類:流行皮件、流行鞋區、流行飾品、背包
+
+                流行皮件中分類:男用皮件、女用皮件
+                流行鞋區中分類:少女鞋區、紳士流行鞋區
+                流行飾品中分類:時尚手錶、時尚珠寶
+                背包中分類:背包 -->
+
+        <div id="right">
+        </div>
+
+
+    </div>
+
+    <div id="bottom" style="line-height:70px;background:url(icon/bot.png); color:#FFF;" class="ct">
+        頁尾版權 : </div>
+    </div>
+
+
+    <footer>
+        © 2026 ZOMBIE COUPLE SHOP. MISSION ACCOMPLISHED.
     </footer>
 </body>
 

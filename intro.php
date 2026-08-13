@@ -1,0 +1,105 @@
+        <section class="product-list" id="right">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="title">圖片</th>
+                            <th class="title">品名</th>
+                            <th class="title">售價</th>
+                            <th class="title">規格</th>
+                            <th class="title">數量</th>
+                            <th class="title">小計</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="img"><img src="yarn/yarn001.jpg" alt="貓頭鷹"></td>
+                            <td><strong>貓頭鷹</strong></td>
+                            <td>390</td>
+                            <td>尺寸約 8cm，含金屬扣環</td>
+                            <td><input type="number" value="0"></td>
+                            <td><input type="number" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="img shift-down"><img src="yarn/yarn002.jpg"></td>
+                            <td class="product-info">寶可夢球</td>
+                            <td class="product-price">390</td>
+                            <td class="subtotal">尺寸約 8cm，含金屬扣環</td>
+                            <td class="subtotal"><input type="number"></td>
+                            <td class="subtotal"><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td class="img shift-up-left"><img src="yarn/yarn003.jpg"></td>
+                            <td class="product-info">小鈴鐺項圈</td>
+                            <td class="product-price">390</td>
+                            <td class="subtotal">尺寸約 8cm，含金屬扣環</td>
+                            <td class="subtotal"><input type="number"></td>
+                            <td class="subtotal"><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td class="img shift-up-right"><img src="yarn/yarn004.jpg"></td>
+                            <td class="product-info">嘟嘴小鴨</td>
+                            <td class="product-price">390</td>
+                            <td class="subtotal">尺寸約 8cm，含金屬扣環</td>
+                            <td class="subtotal"><input type="number"></td>
+                            <td class="subtotal"><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td class="img shift-up"><img src="yarn/yarn005.jpg"></td>
+                            <td class="product-info">小鴨置物籃</td>
+                            <td class="product-price">390</td>
+                            <td class="subtotal">尺寸約 8cm，含金屬扣環</td>
+                            <td class="subtotal"><input type="number"></td>
+                            <td class="subtotal"><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td class="img shift-down"><img src="yarn/yarn006.jpg"></td>
+                            <td class="product-info">小小兵鑰匙圈</td>
+                            <td class="product-price">390</td>
+                            <td class="subtotal">尺寸約 8cm，含金屬扣環</td>
+                            <td class="subtotal"><input type="number"></td>
+                            <td class="subtotal"><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td class="img"><img src="yarn/yarn007.jpg"></td>
+                            <td class="product-info">毛怪大眼怪</td>
+                            <td class="product-price">390</td>
+                            <td class="subtotal">尺寸約 8cm，含金屬扣環</td>
+                            <td class="subtotal"><input type="number"></td>
+                            <td class="subtotal"><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td class="img"><img src="yarn/yarn008.jpg"></td>
+                            <td class="product-info">皮卡丘</td>
+                            <td class="product-price">390</td>
+                            <td class="subtotal">尺寸約 8cm，含金屬扣環</td>
+                            <td class="subtotal"><input type="number"></td>
+                            <td class="subtotal"><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td class="img"><img src="yarn/yarn009.jpg"></td>
+                            <td class="product-info">無臉男鑰匙圈</td>
+                            <td class="product-price">390</td>
+                            <td class="subtotal">尺寸約 8cm，含金屬扣環</td>
+                            <td class="subtotal"><input type="number"></td>
+                            <td class="subtotal"><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td class="img"><img src="yarn/yarn010.jpg"></td>
+                            <td class="product-info">龍貓鑰匙圈</td>
+                            <td class="product-price">880</td>
+                            <td class="subtotal">尺寸約 8cm，含金屬扣環</td>
+                            <td class="subtotal"><input type="number"></td>
+                            <td class="subtotal"><input type="number"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="notice-section">
+                    <div class="notice-title">SYSTEM NOTICE</div>
+                    <ul class="notice-list">
+                        <li>所有商品均為手工編織，工作天約 <span class="highlight-text">7-14 天</span>。</li>
+                        <li>手工製品具有 <span class="highlight-text">Unique Stats</span> (手作溫度)。</li>
+                        <li>螢幕色彩與實品可能有些許色差，請以實物為準。</li>
+                        <li>這次的風格已經切換為 <span class="highlight-text">8-Bit Cute Horror</span>。</li>
+                    </ul>
+                </div>
+            </section>
