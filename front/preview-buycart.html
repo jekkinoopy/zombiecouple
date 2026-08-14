@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【預覽用】購物車 | ZombieCoupleShop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/css.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <header class="shop-header">
+        <div class="hero-card">
+            <div class="hero-art">
+                <img src="../banner.jpg" alt="Zombie Couple Shop 主視覺：手作鉤織殭屍玩偶" class="hero-art__img" fetchpriority="high">
+            </div>
+            <div class="hero-bar">
+                <div class="hero-bar__mark">
+                    <img src="../logo.jpg" alt="Zombie Couple Shop 標誌" class="hero-bar__logo">
+                </div>
+                <div class="hero-bar__copy">
+                    <p class="hero-bar__brand">Zombie Couple Shop</p>
+                    <h1>購物車</h1>
+                    <p class="hero-bar__tag">Your Cart</p>
+                </div>
+            </div>
+        </div>
+        <nav class="site-nav" aria-label="站內導覽">
+            <a href="preview-index.html">商品列表</a>
+            <a href="preview-buycart.html">購物車<span class="cart-count">3</span></a>
+            <a href="#">登出（test01）</a>
+        </nav>
+    </header>
+
+    <main class="main-section">
+        <section class="product-list">
+            <nav class="checkout-steps" aria-label="結帳流程">
+                <div class="step is-active">
+                    <span class="step-circle">1</span>
+                    <span class="step-label">確認訂單</span>
+                </div>
+                <span class="step-line" aria-hidden="true"></span>
+                <div class="step">
+                    <span class="step-circle">2</span>
+                    <span class="step-label">填寫付款資料</span>
+                </div>
+                <span class="step-line" aria-hidden="true"></span>
+                <div class="step">
+                    <span class="step-circle">3</span>
+                    <span class="step-label">完成訂購</span>
+                </div>
+            </nav>
+
+            <div class="table-scroll" role="region" aria-label="購物車商品清單">
+                <table class="product-table cart-table">
+                    <thead>
+                        <tr>
+                            <th class="title">圖片</th>
+                            <th class="title">編號</th>
+                            <th class="title">商品名稱</th>
+                            <th class="title">數量</th>
+                            <th class="title">庫存量</th>
+                            <th class="title">單價</th>
+                            <th class="title">小計</th>
+                            <th class="title">刪除</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="img"><img src="../yarn/yarn001.jpg" alt="貓頭鷹"></td>
+                            <td>100001</td>
+                            <td class="product-info">貓頭鷹</td>
+                            <td class="qty-static">1</td>
+                            <td class="qty-static">12</td>
+                            <td class="product-price">NT$ 390</td>
+                            <td class="line-total">$ 390</td>
+                            <td class="remove"><a class="remove-btn" href="#">移除</a></td>
+                        </tr>
+                        <tr>
+                            <td class="img sc"><img src="../yarn/yarn002.jpg" alt="寶可夢球"></td>
+                            <td>100002</td>
+                            <td class="product-info">寶可夢球</td>
+                            <td class="qty-static">2</td>
+                            <td class="qty-static">8</td>
+                            <td class="product-price">NT$ 390</td>
+                            <td class="line-total">$ 780</td>
+                            <td class="remove"><a class="remove-btn" href="#">移除</a></td>
+                        </tr>
+                        <tr>
+                            <td class="img"><img src="../yarn/yarn010.jpg" alt="龍貓鑰匙圈"></td>
+                            <td>100010</td>
+                            <td class="product-info">龍貓鑰匙圈</td>
+                            <td class="qty-static">1</td>
+                            <td class="qty-static">4</td>
+                            <td class="product-price">NT$ 880</td>
+                            <td class="line-total">$ 880</td>
+                            <td class="remove"><a class="remove-btn" href="#">移除</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="order-summary">
+                <div class="summary-row summary-row--total">
+                    <span class="summary-label">總計</span>
+                    <span class="summary-value grand-total">$ 2,050</span>
+                </div>
+                <a class="btn-next" href="preview-pay.html" style="display:block;text-align:center;text-decoration:none;">前往結帳</a>
+            </div>
+
+            <div class="notice-section">
+                <h2 class="notice-title"><span class="notice-title__en" lang="en">Checkout Notice</span><span class="notice-title__sep" aria-hidden="true"> / </span><span class="notice-title__zh" lang="zh-Hant">結帳須知</span></h2>
+                <ul class="notice-list">
+                    <li>所有商品均為手工編織，工作天約 <span class="highlight-text">7-14 天</span>，不收急單。</li>
+                    <li>下單後將依付款順序安排製作，若需調整規格請於下單前私訊確認。</li>
+                    <li>商品一經拆封使用或客製化商品，恕不接受退換貨。</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Zombie Couple Shop</p>
+        <p class="site-footer__rights">All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

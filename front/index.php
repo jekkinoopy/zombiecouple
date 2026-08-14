@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>手作毛線系列 | ZombieCoupleShop</title>
-    <link rel="stylesheet" href="./css/css.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="../css/css.css">
+    <link rel="stylesheet" href="../css/main.css">
 
 </head>
 
@@ -19,7 +19,7 @@
             <a href="?">
                 <header class="shop-header">
                     <div class="banner-area">
-                        <img src="./banner.png" alt="ZombieCouple橫幅" class="banner">
+                        <img src="../banner.png" alt="ZombieCouple橫幅" class="banner">
                         <h1>手作毛線系列</h1>
                         <p class="subtitle">CROCHET DOLLS</p>
                     </div>

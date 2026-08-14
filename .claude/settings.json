@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git ls-tree *)",
+      "Bash(cp main.css main.css.local-backup.css)",
+      "Bash(cp index.php index.php.local-backup.php)",
+      "Bash(git checkout *)",
+      "Bash(rm index.php)",
+      "Bash(/c/xampp/php/php.exe -v)",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -h 127.0.0.1 -u root -e \"SHOW DATABASES;\")",
+      "Bash(tasklist //FI \"IMAGENAME eq mysqld.exe\")",
+      "Bash(tasklist //FI \"IMAGENAME eq httpd.exe\")",
+      "Bash(./mysqld.exe --defaults-file=/c/xampp/mysql/bin/my.ini --standalone)",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -h 127.0.0.1 -u root -e \"CREATE DATABASE IF NOT EXISTS zombiecouple_q4 DEFAULT CHARACTER SET utf8mb4;\")",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -h 127.0.0.1 -u root zombiecouple_q4)",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -h 127.0.0.1 -u root zombiecouple_q4 -e \"SHOW TABLES;\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://127.0.0.1:8000/index.php)",
+      "Bash(curl -s http://127.0.0.1:8000/index.php)",
+      "Bash(tasklist //FI \"IMAGENAME eq php.exe\")",
+      "Bash(/c/xampp/php/php.exe -S 127.0.0.1:8000)",
+      "Bash(chromium-cli --help)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(node -e \"require.resolve\\('playwright'\\)\")",
+      "Bash(npx --yes playwright screenshot --help)",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -h 127.0.0.1 -u root zombiecouple_q4 -e \"SELECT COUNT\\(*\\) AS product_count FROM q4t5_product; SELECT COUNT\\(*\\) AS admin_count FROM q4t10_admin; SELECT COUNT\\(*\\) AS order_count FROM q4t8_order; SELECT COUNT\\(*\\) AS user_count FROM q4t9_user;\")",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -h 127.0.0.1 -u root zombiecouple_q4 -e \"UPDATE q4t5_product SET img = CONCAT\\('../', img\\) WHERE img NOT LIKE '../%'; SELECT id, img FROM q4t5_product;\")",
+      "Bash(curl -sI http://127.0.0.1:8000/front/buycart.php)",
+      "Bash(curl -sI http://127.0.0.1:8000/front/pay.php)",
+      "Bash(curl -sI http://127.0.0.1:8000/back/order.php)",
+      "Bash(curl -sI http://127.0.0.1:8000/back/orderdetail.php)",
+      "Read(//tmp/**)",
+      "Bash(/c/xampp/mysql/bin/mysql.exe -h 127.0.0.1 -u root zombiecouple_q4 -e \"DELETE FROM q4t8_order; DELETE FROM q4t9_user; SELECT COUNT\\(*\\) AS orders FROM q4t8_order; SELECT COUNT\\(*\\) AS users FROM q4t9_user;\")",
+      "Bash(rm -f /tmp/zc_admin_cookie.txt /tmp/zc_user_cookie.txt /tmp/*.html /tmp/*.txt)"
+    ]
+  }
+}

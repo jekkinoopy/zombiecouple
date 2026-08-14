@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【預覽用】結帳確認 | ZombieCoupleShop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/css.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <header class="shop-header">
+        <div class="hero-card">
+            <div class="hero-art">
+                <img src="../banner.jpg" alt="Zombie Couple Shop 主視覺：手作鉤織殭屍玩偶" class="hero-art__img" fetchpriority="high">
+            </div>
+            <div class="hero-bar">
+                <div class="hero-bar__mark">
+                    <img src="../logo.jpg" alt="Zombie Couple Shop 標誌" class="hero-bar__logo">
+                </div>
+                <div class="hero-bar__copy">
+                    <p class="hero-bar__brand">Zombie Couple Shop</p>
+                    <h1>結帳確認</h1>
+                    <p class="hero-bar__tag">Confirm Order</p>
+                </div>
+            </div>
+        </div>
+        <nav class="site-nav" aria-label="站內導覽">
+            <a href="preview-index.html">商品列表</a>
+            <a href="preview-buycart.html">購物車</a>
+            <a href="#">登出（test01）</a>
+        </nav>
+    </header>
+
+    <main class="main-section">
+        <section class="product-list">
+            <nav class="checkout-steps" aria-label="結帳流程">
+                <div class="step">
+                    <span class="step-circle">1</span>
+                    <span class="step-label">確認訂單</span>
+                </div>
+                <span class="step-line" aria-hidden="true"></span>
+                <div class="step is-active">
+                    <span class="step-circle">2</span>
+                    <span class="step-label">填寫付款資料</span>
+                </div>
+                <span class="step-line" aria-hidden="true"></span>
+                <div class="step">
+                    <span class="step-circle">3</span>
+                    <span class="step-label">完成訂購</span>
+                </div>
+            </nav>
+
+            <div class="order-detail-block">
+                <dl>
+                    <dt>收件姓名</dt>
+                    <dd>王小美</dd>
+                    <dt>聯絡電話</dt>
+                    <dd>0912-345-678</dd>
+                    <dt>收件地址</dt>
+                    <dd>台北市信義區松仁路 100 號</dd>
+                    <dt>電子信箱</dt>
+                    <dd>test01@example.com</dd>
+                </dl>
+            </div>
+
+            <div class="table-scroll" role="region" aria-label="訂單商品明細">
+                <table class="product-table cart-table">
+                    <thead>
+                        <tr>
+                            <th class="title">圖片</th>
+                            <th class="title">商品名稱</th>
+                            <th class="title">數量</th>
+                            <th class="title">單價</th>
+                            <th class="title">小計</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="img"><img src="../yarn/yarn001.jpg" alt="貓頭鷹"></td>
+                            <td class="product-info">貓頭鷹</td>
+                            <td class="qty-static">1</td>
+                            <td class="product-price">NT$ 390</td>
+                            <td class="line-total">$ 390</td>
+                        </tr>
+                        <tr>
+                            <td class="img sc"><img src="../yarn/yarn002.jpg" alt="寶可夢球"></td>
+                            <td class="product-info">寶可夢球</td>
+                            <td class="qty-static">2</td>
+                            <td class="product-price">NT$ 390</td>
+                            <td class="line-total">$ 780</td>
+                        </tr>
+                        <tr>
+                            <td class="img"><img src="../yarn/yarn010.jpg" alt="龍貓鑰匙圈"></td>
+                            <td class="product-info">龍貓鑰匙圈</td>
+                            <td class="qty-static">1</td>
+                            <td class="product-price">NT$ 880</td>
+                            <td class="line-total">$ 880</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="order-summary">
+                <div class="summary-row summary-row--total">
+                    <span class="summary-label">應付總額</span>
+                    <span class="summary-value grand-total">$ 2,050</span>
+                </div>
+                <button type="button" class="btn-next">確定送出訂單</button>
+                <button type="button" class="btn-reset" onclick="window.history.back()">返回修改訂單</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Zombie Couple Shop</p>
+        <p class="site-footer__rights">All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
